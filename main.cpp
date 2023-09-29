@@ -37,11 +37,7 @@ static QShader getShader(const QString &name)
 
 void ExampleRhiWidget::initialize(QRhiCommandBuffer *cb)
 {
-    if (m_rhi != rhi()) {
-        m_pipeline.reset();
-        m_rhi = rhi();
-    }
-
+    m_rhi = rhi();
     if (!m_pipeline) {
         m_vbuf.reset(m_rhi->newBuffer(QRhiBuffer::Immutable, QRhiBuffer::VertexBuffer, sizeof(vertexData)));
         m_vbuf->create();
