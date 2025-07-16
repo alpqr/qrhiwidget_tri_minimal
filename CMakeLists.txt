@@ -1,7 +1,7 @@
 cmake_minimum_required(VERSION 3.20)
 project(testapp LANGUAGES CXX)
 
-find_package(Qt6 COMPONENTS Core Gui Widgets ShaderTools)
+find_package(Qt6 COMPONENTS Core Gui Widgets ShaderTools OPTIONAL_COMPONENTS GuiPrivate)
 
 qt_add_executable(testapp
     main.cpp
